@@ -15,7 +15,7 @@ function PageContainer() {
         <div>
           <TopBar />
  
-            <Route path={["/", "/quiz"]}>
+            <Route exact path={["/", "/quiz"]}>
                 <Quiz />
             </Route>
 
@@ -26,6 +26,7 @@ function PageContainer() {
             <Route path="/search">
                 <Search />
             </Route>
+
             <Footer />
         </div>        
 
