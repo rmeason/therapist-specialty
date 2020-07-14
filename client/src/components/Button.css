@@ -1,0 +1,7 @@
+button {
+    color: whitesmoke;
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    padding: .7rem 1rem;
+}
