@@ -1,4 +1,8 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import LoginButton from "./LoginButton"
+import LogoutButton from "./LogoutButton"
+
 import "./Footer.css";
 
 function Footer(props) {
@@ -12,14 +16,14 @@ function Footer(props) {
                 <div class="marketing-site-footer-block">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <p>Immediate Emergency:
-                    <a href="tel:911" class="911-number">  911</a>
+                    <a href="tel:911" class="911-number num">  911</a>
                     </p>
                 </div>
                 
                 <div class="marketing-site-footer-block">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <p>Suicide Prevention Life Line:
-                    <a href="tel:1-800-273-8255" class="suicide-number">  1-800-273-8255</a>
+                    <a href="tel:1-800-273-8255" class="suicide-number num">  1-800-273-8255</a>
                     </p>
                 </div>
 
@@ -42,12 +46,15 @@ function Footer(props) {
                 </div>
                 <div class="column">
                     <ul class="menu marketing-site-footer-bottom-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><Link class="link" to="/">Mental Health Quiz</Link></li>
+                            <li><Link class="link" to="/about">About the Site</Link></li>
+                            <li><Link class="link" to="/search">Search Providers</Link></li>
+                            <li>
+                                <LoginButton />
+                            </li>
+                            <li>
+                                <LogoutButton />
+                            </li>
                     </ul>
                 </div>
                 </div>
