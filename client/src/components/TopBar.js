@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import LoginButton from "./LoginButton"
+
 import "./TopBar.css";
 
 function TopBar(props) {
@@ -16,6 +18,9 @@ function TopBar(props) {
                             <li><Link to="/">Thing 1</Link></li>
                             <li><Link to="/about">Thing 2</Link></li>
                             <li><Link to="/search">Thing 3</Link></li>
+                            <li>
+                                <LoginButton />
+                            </li>
                         </ul>
                     </div>
                 </div>
