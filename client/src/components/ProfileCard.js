@@ -29,13 +29,14 @@ function ProfileCard(props) {
             <h4>{props.name}</h4>
             <p>{props.specialties}</p>
         <span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text">{props.location}</span></span>
+            <br />
+            <p>{props.contact}</p>
         </div>
 
 
-
-        {/* <div class="card-user-button">
-            <a href="#" class="hollow button">FOLLOW</a>
-        </div> */}
+        <div class="card-user-button">
+            <a href="#" class="hollow button">Psychology Today <br /> <br /> Profile</a>
+        </div>
         </div>
 
     );

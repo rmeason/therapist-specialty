@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import SearchBtn from "../SearchBtn"
-import ProfileCard from "../ProfileCard"
+import SearchBtn from "../SearchBtn";
+import ProfileCard from "../ProfileCard";
 import Providers from "./Providers.json";
+import SearchWrapper from "../SearchWrapper";
 
 import "./Search.css"
 
@@ -13,7 +14,7 @@ class Search extends Component {
 
     render() {
         return (
-          <div>
+          <SearchWrapper>
             <SearchBtn />
             {this.state.Providers.map(Providers => (
               <ProfileCard
@@ -22,10 +23,11 @@ class Search extends Component {
                 image={Providers.image}
                 name={Providers.name}
                 specialties={Providers.specialties}
+                contact={Providers.contact}
                 location={Providers.location}
               />
             ))}
-          </div>
+          </SearchWrapper>
         );
       }
 
