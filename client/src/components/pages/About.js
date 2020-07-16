@@ -14,7 +14,8 @@ const About = () => (
         </div>
         <div class="small-12 medium-8 columns">
         <h4 class="separator-left">Our Mission</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eum, iusto vel repudiandae, quaerat soluta sequi officia. Blanditiis atque, illo eaque sint in architecto illum nostrum repudiandae labore tenetur! Eaque impedit pariatur odio ad ipsum qui aspernatur dolorem consequuntur a molestias nisi, quae voluptatem expedita, inventore voluptatibus dolores, veritatis corporis facilis laudantium explicabo vero! Non hic quia facilis blanditiis eum.</p>
+        <p>This site is meant to help those who are struggling with life at the moment, or simply need to find someone to talk to.</p>
+        <p>We invite you to take the survey on our "Mental Health Quiz" page. There you will be able to learn a little more about how you are feeling, and what you and your potential therapist need to focus on.</p>
         </div>
     </div>
     </div>

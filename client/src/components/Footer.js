@@ -30,7 +30,7 @@ function Footer(props) {
                 </div>
                 <div class="medium-4 columns">
                 <h4 class="marketing-site-footer-name">Disclaimer</h4>
-                <p>These quizez (as well as peer-reviewed mental-health scales) should not be viewed as or replace the opinion of a professional, and does not act as a diagnosis.</p>
+                <p>These quizzes (as well as peer-reviewed mental-health scales) should not be viewed as or replace the opinion of a professional, and does not act as a diagnosis.</p>
                 <p>This should only be viewed as a starting point to better unerstand yourself and the recources that can help you.</p>
                 <ul class="menu marketing-site-footer-menu-social simple">
                     <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
