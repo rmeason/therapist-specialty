@@ -14,13 +14,10 @@ function SearchBtn(props) {
             type="search"  
             {...props} 
             />
-        
+
         <div className="input-group-button">
-        <datalist id="Provider">
-          {props.Providers.map(Provider => (
-            <option value={Provider} key={Provider} />
-          ))}
-        </datalist>
+
+
             <input 
             type="submit" 
             onClick={props.handleFormSubmit}
@@ -34,4 +31,22 @@ function SearchBtn(props) {
     );
 }
 
+
 export default SearchBtn;
+
+
+// {providerss.length ? (
+// <List>
+// {providers.map(provider => {
+//   return (
+//     <ListItem key={provider._id}>
+//       <a href={"/providers/" + provider._id}>
+//         <strong>
+//           {provider.title} by {provider.author}
+//         </strong>
+//       </a>
+//     </ListItem>
+//   );
+// })}
+// </List>
+// );

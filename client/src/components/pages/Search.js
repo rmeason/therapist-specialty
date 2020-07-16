@@ -1,22 +1,72 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBtn from "../SearchBtn";
 import ProfileCard from "../ProfileCard";
 import Providers from "./Providers.json";
 import SearchWrapper from "../SearchWrapper";
+import ProviderQuiz from "../providerQuiz";
+
+import ReactDOM from "react-dom";
+import {
+  useLocation, useParams
+} from "react-router-dom";
+
+// react router dom
+
+// import API from "../../utils/API";
 
 import "./Search.css"
 
 
 
-class Search extends Component {
+function Search() {
 
-    state = {Providers};
 
-    render() {
+    const [state, setState] = useState(Providers);
+
+
+    // const [providers, setProviders] = useState([])
+
+    // useEffect(() => {
+    //   loadProviders
+    // }, [])
+
+
+    // function loadProviders() {
+    //   API.getProviders()
+    //     .then(res => 
+    //       setProviders(res.data)
+    //     )
+    //     .catch(err => console.log(err));
+    // };
+      let location = useLocation();
+useEffect(() =>
+
+{     let personScoresArray = [];
+
+
+      let likertArray = location.search.split("=");
+
+
+
+      for (let i = 1; i < likertArray.length; i++) {
+      console.log(likertArray[i].charAt(0))    
+             personScoresArray.push(likertArray[i].charAt(0));
+      }
+      console.log(personScoresArray);
+
+      setState(ProviderQuiz(Providers, personScoresArray));
+
+      console.log(ProviderQuiz(Providers, personScoresArray));
+},[])
+      
+
+
+
+
         return (
           <SearchWrapper>
             <SearchBtn />
-            {this.state.Providers.map(Providers => (
+            {state.map(Providers => (
               <ProfileCard
                 id={Providers.id}
                 key={Providers.id}
@@ -31,54 +81,7 @@ class Search extends Component {
         );
       }
 
-}
+
 
 export default Search;
-// 
-// const Search = () => (
-
-    // <div>
-    
-    //     <SearchBtn />
-
-    //     <section class="four-up-feature">
-    //         <div class="row four-up-feature-header align-center">
-    //             <div class="medium-8 columns">
-    //             <h2>Your Local Providers</h2>
-    //             <h5> Below is a list of providers in your area who specialize in the symptoms you display:</h5>
-    //             </div>
-    //         </div>
-    //         <div class="row align-spaced">
-    //             <div class="small-10 medium-3 columns">
-                
-    //                 <ProfileCard />
-                
-    //             </div>
-    //             <div class="small-10 medium-3 columns">
-                
-    //                 <ProfileCard />
-                
-    //             </div>
-    //             <div class="small-10 medium-3 columns">
-                
-    //                 <ProfileCard />
-                
-    //             </div>
-    //             <div class="small-10 medium-3 columns">
-
-    //                 <ProfileCard />
-
-    //             </div>
-    //         </div>
-    //     </section>
-
-
-
-    // </div>
-
-// );
-
-
-
-
 

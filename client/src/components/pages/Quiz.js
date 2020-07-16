@@ -6,7 +6,7 @@ const Quiz = () => (
 
  <div class="wrap">
   <h1 class="quiz-header">Please answer a few questions:</h1>
-  <form action="./Search" method="get">
+  <form action="./search" method="get">
     <label class="statement">Are you more anxious or depressed?</label>
     <ul class='likert'>
       <li>
