@@ -39,25 +39,27 @@ function Search() {
     //     .catch(err => console.log(err));
     // };
       let location = useLocation();
-useEffect(() =>
+      
+      
+      useEffect(() =>
 
-{     let personScoresArray = [];
-
-
-      let likertArray = location.search.split("=");
-
+      {     let personScoresArray = [];
 
 
-      for (let i = 1; i < likertArray.length; i++) {
-      console.log(likertArray[i].charAt(0))    
-             personScoresArray.push(likertArray[i].charAt(0));
-      }
-      console.log(personScoresArray);
+            let likertArray = location.search.split("=");
 
-      setState(ProviderQuiz(Providers, personScoresArray));
 
-      console.log(ProviderQuiz(Providers, personScoresArray));
-},[])
+
+            for (let i = 1; i < likertArray.length; i++) {
+            console.log(likertArray[i].charAt(0))    
+                  personScoresArray.push(likertArray[i].charAt(0));
+            }
+            console.log(personScoresArray);
+
+            setState(ProviderQuiz(Providers, personScoresArray));
+
+            console.log(ProviderQuiz(Providers, personScoresArray));
+      },[])
       
 
 
