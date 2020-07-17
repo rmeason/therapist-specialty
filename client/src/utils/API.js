@@ -9,10 +9,15 @@ export default {
   getProvider: function(id) {
     return axios.get("/api/providers/" + id);
   },
+
+  getProvider: function(specialties) {
+    return axios.get("/api/providers/" + specialties);
+  },
+
   // Deletes the provider with the given id
-  // deleteProvider: function(id) {
-  //   return axios.delete("/api/providers/" + id);
-  // },
+  deleteProvider: function(id) {
+    return axios.delete("/api/providers/" + id);
+  },
   // Saves a provider to the database
   saveProvider: function(providerData) {
     return axios.post("/api/providers", providerData);
