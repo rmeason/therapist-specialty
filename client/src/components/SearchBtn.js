@@ -23,8 +23,9 @@ function SearchBtn(props) {
             onClick={props.handleFormSubmit}
             className="button secondary" 
             value="Search" 
+
             />
-        
+
         </div>
         </div>
 
