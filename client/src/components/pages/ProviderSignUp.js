@@ -5,9 +5,9 @@ const ProviderSignUp = () => (
 <form>
 
 
-    <div id="1stPage" >
+    <div id="page1" >
         <div class="form-icons">
-            <h4>Sign-Up to connect with your most compatible clients:</h4>
+            <h3>Sign-Up to connect with your most compatible clients:</h3>
 
             <div class="input-group">
             <span class="input-group-label">
@@ -27,7 +27,7 @@ const ProviderSignUp = () => (
             <span class="input-group-label">
                 <i class="fa fa-specialty"></i>
             </span>
-            <input class="input-group-field" type="text" placeholder="List what you prefer to treat (Anxiety or Depression)" />
+            <input class="input-group-field" type="text" placeholder="What do you specialize in?" />
             </div>
 
             <div class="input-group">
@@ -50,7 +50,7 @@ const ProviderSignUp = () => (
 
 
 
-    <div id="2ndPage" >
+    <div id="page2" >
         <label class="statement">Are you more comfortable treating anxiety or depression?</label>
         <ul class='likert'>
         <li>
@@ -125,12 +125,16 @@ const ProviderSignUp = () => (
         {/* <button class="submit">Submit</button> */}
         </div>
 
-        <button class="button expanded">Sign-Up</button>
     </div>
-
+    <br />
+    <button class="button expanded">Sign-Up</button>
 
 </form>
 );
+
+
+
+export default ProviderSignUp;
 
 
 
@@ -149,6 +153,3 @@ const ProviderSignUp = () => (
 //   .catch(err => {
 //     console.log(err);
 //   }); --}}
-
-
-export default ProviderSignUp;

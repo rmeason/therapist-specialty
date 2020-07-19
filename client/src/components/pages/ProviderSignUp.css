@@ -25,8 +25,15 @@ form .form-icons {
     width: 1rem;
   }
 
-  .button {
+  .button.expanded {
       background: dimgray;
+      width: 50%;
+      margin-left: 25%;
   }
-  
-  
+
+
+
+
+  #page2 {
+      border: double;
+  }
