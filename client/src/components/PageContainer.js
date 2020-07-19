@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Quiz from "./pages/Quiz";
 import About from "./pages/About";
 import Search from "./pages/Search";
+import ProviderSignUp from "./pages/ProviderSignUp";
 import Loading from "./pages/Loading";
 
 
@@ -32,6 +33,10 @@ function PageContainer() {
 
             <Route path="/search">
                 <Search />
+            </Route>
+
+            <Route path="/providerSignUp">
+                <ProviderSignUp />
             </Route>
 
             <Footer />

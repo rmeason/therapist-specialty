@@ -16,6 +16,7 @@ function TopBar(props) {
                     </div>
                     <div class="top-bar-right">
                         <ul class="menu">
+                            <li><Link class="link" id="signUp" to="/providerSignUp">Provider Sign-Up Page</Link></li>
                             <li><Link class="link" to="/">Mental Health Quiz</Link></li>
                             <li><Link class="link" to="/about">About the Site</Link></li>
                             <li><Link class="link" to="/search">Search Providers</Link></li>

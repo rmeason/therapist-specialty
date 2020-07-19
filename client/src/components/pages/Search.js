@@ -23,6 +23,8 @@ function Search() {
 
     const [state, setState] = useState([]);
 
+    const [formObject, setFormObject] = useState({});
+
 
       let location = useLocation();
       

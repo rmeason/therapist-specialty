@@ -1,0 +1,32 @@
+form {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+form .form-icons {
+    text-align: center;
+  }
+  
+  form .form-icons h4 {
+    margin-bottom: 1rem;
+  }
+  
+  form .form-icons .input-group-label {
+
+    border-color: black;
+  }
+  
+  form .form-icons .input-group-field {
+    border-color: black;
+  }
+  
+  form .form-icons .fa {
+    color: white;
+    width: 1rem;
+  }
+
+  .button {
+      background: dimgray;
+  }
+  
+  
