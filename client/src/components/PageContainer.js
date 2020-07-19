@@ -39,6 +39,10 @@ function PageContainer() {
                 <ProviderSignUp />
             </Route>
 
+            {/* <Route path="/loading">
+                <Loading />
+            </Route> */}
+
             <Footer />
         </div>        
 

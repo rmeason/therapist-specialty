@@ -9,37 +9,41 @@ const ProviderSignUp = () => (
         <div class="form-icons">
             <h3>Sign-Up to connect with your most compatible clients:</h3>
 
+            <br />
+
+            <p id="imgTxt" >Choose your profile image: </p>
+
             <div class="input-group">
-            <span class="input-group-label">
+            <span class="input-group-label" id="fa-img">
                 <i class="fa fa-image"></i>
             </span>
             <input class="input-group-field" type="file" placeholder="Add a professional photo" />
             </div>
 
             <div class="input-group">
-            <span class="input-group-label">
-                <i class="fa fa-name"></i>
+            <span class="input-group-label" id="fa-img1">
+                <i class="fa fa-user"></i>
             </span>
             <input class="input-group-field" type="text" placeholder="Full name" />
             </div>
 
             <div class="input-group">
-            <span class="input-group-label">
-                <i class="fa fa-specialty"></i>
+            <span class="input-group-label" id="fa-img2">
+                <i class="fa fa-trophy"></i>
             </span>
             <input class="input-group-field" type="text" placeholder="What do you specialize in?" />
             </div>
 
             <div class="input-group">
-            <span class="input-group-label">
-                <i class="fa fa-contact"></i>
+            <span class="input-group-label" id="fa-img3">
+                <i class="fa fa-mobile"></i>
             </span>
             <input class="input-group-field" type="text" placeholder="Work phone number" />
             </div>
 
             <div class="input-group">
-            <span class="input-group-label">
-                <i class="fa fa-location"></i>
+            <span class="input-group-label" id="fa-img4">
+                <i class="fa fa-map-marker"></i>
             </span>
             <input class="input-group-field" type="text" placeholder="Location" />
             </div>

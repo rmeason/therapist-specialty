@@ -15,9 +15,39 @@ form .form-icons {
 
     border-color: black;
   }
+
+  #fa-img {
+
+   margin-top: 2.5px;
+   background: darkslategray;
+  }
+
+  #fa-img1 {
+
+    margin-top: 10px;
+    background: darkslategray;
+  }
+  
+  #fa-img2 {
+
+    margin-top: 10px;
+    background: darkslategray;
+  }
+  
+  #fa-img3 {
+
+    margin-top: 10px;
+    background: darkslategray;
+  }
+  
+  #fa-img4 {
+
+    margin-top: 10px;
+    background: darkslategray;
+  }
   
   form .form-icons .input-group-field {
-    border-color: black;
+    border-color: slategray;
   }
   
   form .form-icons .fa {
@@ -32,8 +62,11 @@ form .form-icons {
   }
 
 
-
+  #imgTxt {
+      float: left;
+  }
 
   #page2 {
       border: double;
+      border-color: darkslategray;
   }

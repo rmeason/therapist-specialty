@@ -1,9 +1,9 @@
 import React from "react";
-import loading from "./img/loadingGif.gif";
+import loading from "./img/newLoadingGif.gif";
 import "./Loading.css";
 
 const Loading = () => (
-    <div>
+    <div id="loading" >
         <img src={loading} />
     </div>
 );
