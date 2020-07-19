@@ -20,6 +20,7 @@ export default {
   },
   // Saves a provider to the database
   saveProvider: function(providerData) {
+    console.log(providerData)
     return axios.post("/api/providers", providerData);
   }
 };

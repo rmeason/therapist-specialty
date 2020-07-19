@@ -1,8 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
+import API from "../../utils/API";
 import "./ProviderSignUp.css"
 
-const ProviderSignUp = () => (
-<form>
+
+
+
+const ProviderSignUp = () => {
+    
+    const [inputs, setInputs]=useState({})
+
+    const submit = (e) => {
+        e.preventDefault();
+        console.log("works")
+        API.saveProvider(inputs)
+    }
+
+    const handleInputs = (e) => {
+        let name = e.target.name
+        let value = e.target.value
+        // console.log(name)
+        // console.log(value)
+        let clone = inputs
+        clone[name]=value
+        console.log(clone)
+        setInputs(clone)
+    }
+    
+    return(
+<form onSubmit={submit}>
 
 
     <div id="page1" >
@@ -24,14 +49,14 @@ const ProviderSignUp = () => (
             <span class="input-group-label" id="fa-img1">
                 <i class="fa fa-user"></i>
             </span>
-            <input class="input-group-field" type="text" placeholder="Full name" />
+            <input name="name" onChange={handleInputs} required class="input-group-field" type="text" placeholder="Full name" />
             </div>
 
             <div class="input-group">
             <span class="input-group-label" id="fa-img2">
                 <i class="fa fa-trophy"></i>
             </span>
-            <input class="input-group-field" type="text" placeholder="What do you specialize in?" />
+            <input name="specialties" onChange={handleInputs} class="input-group-field" type="text" placeholder="What do you specialize in?" />
             </div>
 
             <div class="input-group">
@@ -124,10 +149,10 @@ const ProviderSignUp = () => (
             <label>Calm</label>
         </li>
         </ul>
-        <div class="buttons">
-        {/* <button class="clear">Clear</button> */}
-        {/* <button class="submit">Submit</button> */}
-        </div>
+        {/* <div class="buttons">
+        <button class="clear">Clear</button>
+        <button class="submit">Submit</button>
+        </div> */}
 
     </div>
     <br />
@@ -135,6 +160,7 @@ const ProviderSignUp = () => (
 
 </form>
 );
+};
 
 
 
