@@ -16,6 +16,7 @@ const providerSeed = [
         "specialties": "Anxiety",
         "contact": "000-000-0000",
         "location": "Houston, Tx",
+        "psychology": "https://www.psychologytoday.com/us/therapists",
         "matrix": [1, 3, 2]
     },
     {
@@ -25,6 +26,7 @@ const providerSeed = [
         "specialties": "Depression",
         "contact": "000-000-0000",
         "location": "Houston, Tx",
+        "psychology": "https://www.psychologytoday.com/us/therapists",
         "matrix": [4, 5, 1]
     },
     {
@@ -34,6 +36,7 @@ const providerSeed = [
         "specialties": "Depression",
         "contact": "000-000-0000",
         "location": "Houston, Tx",
+        "psychology": "https://www.psychologytoday.com/us/therapists",
         "matrix": [3, 1, 4]
     },
     {
@@ -43,6 +46,7 @@ const providerSeed = [
         "specialties": "Anxiety",
         "contact": "000-000-0000",
         "location": "Houston, Tx",
+        "psychology": "https://www.psychologytoday.com/us/therapists",
         "matrix": [5, 2, 3]
     }
 ];

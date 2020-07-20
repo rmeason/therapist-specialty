@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import SearchBtn from "../SearchBtn";
 import ProfileCard from "../ProfileCard";
-// import Providers from "./Providers.json";
-
 import SearchWrapper from "../SearchWrapper";
 import ProviderQuiz from "../providerQuiz";
-
 import API from "../../utils/API";
-
 import ReactDOM from "react-dom";
 import { useLocation, useParams } from "react-router-dom";
-
-// react router dom
-
-
 import "./Search.css"
 
 
@@ -26,16 +18,11 @@ function Search() {
     const [formObject, setFormObject] = useState({});
 
 
-      let location = useLocation();
+    let location = useLocation();
       
     useEffect(() =>
-
-        
-
         {  
-              loadProviders()
-
-              
+              loadProviders() 
         },[])
       
 
@@ -79,6 +66,7 @@ function Search() {
     specialties={Providers.specialties}
     contact={Providers.contact}
     location={Providers.location}
+    psychology={Providers.psychology}
   />
 ))}
 </SearchWrapper>

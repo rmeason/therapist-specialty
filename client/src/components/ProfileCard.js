@@ -1,5 +1,7 @@
 import React from 'react';
 
+import BImg from "./pages/img/Bear.jpg";
+
 import "./ProfileCard.css";
 
 function ProfileCard(props) {
@@ -13,6 +15,10 @@ function ProfileCard(props) {
         <div class="card-user-avatar">
             <img src={props.image} alt={props.name} class="user-image" />
         </div>
+
+
+        {/* src={BImg} alt="Pooh"
+        src={props.image} alt={props.name} */}
 
 
         {/* <div class="card-user-social">
@@ -35,7 +41,7 @@ function ProfileCard(props) {
 
 
         <div class="card-user-button">
-            <a href="#" class="hollow button">Psychology Today <br /> <br /> Profile</a>
+            <a href={props.psychology} class="hollow button">Psychology Today <br /> <br /> Profile</a>
         </div>
         </div>
 

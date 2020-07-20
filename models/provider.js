@@ -8,6 +8,7 @@ const providerSchema = new Schema({
   specialties: { type: String, required: true },
   contact: { type: String, required: false },
   location: { type: String, required: false },
+  psychology: { type: String, required: false },
   matrix: { type: Array, required: false }
 });
 

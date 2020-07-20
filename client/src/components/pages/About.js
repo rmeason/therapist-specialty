@@ -9,7 +9,7 @@ const About = () => (
     <div class="row">
         <div class="small-12 medium-4 columns">
         <div class="author-image">
-            <img src={depression} />
+            <img src={depression} alt="depression" />
         </div>
         </div>
         <div class="small-12 medium-8 columns">
