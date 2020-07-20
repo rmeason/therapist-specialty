@@ -80,12 +80,12 @@ const ProviderSignUp = () => {
             <input name="location" onChange={handleInputs} class="input-group-field" type="text" placeholder="Location" />
             </div>
 
-            {/* <div class="input-group">
+            <div class="input-group">
             <span class="input-group-label" id="fa-img4">
                 <i class="fa fa-connectdevelop"></i>
             </span>
             <input name="psychology" onChange={handleInputs} class="input-group-field" type="text" placeholder="Psychology Today Profile Link" />
-            </div> */}
+            </div>
         </div>
 
         {/* <button class="button expanded" id="next" >Next Page</button> */}
