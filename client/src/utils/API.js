@@ -18,9 +18,16 @@ export default {
   deleteProvider: function(id) {
     return axios.delete("/api/providers/" + id);
   },
+
   // Saves a provider to the database
   saveProvider: function(providerData) {
-    console.log(providerData)
+    console.log(providerData);
+    const providerMatrixArr = [];
+    for (let i = 0; i < 3; i++) {
+      providerMatrixArr.push(providerData["matrix" + i])
+    }
+    providerData.matrix = providerMatrixArr;
+    console.log(providerMatrixArr);
     return axios.post("/api/providers", providerData);
   }
 };

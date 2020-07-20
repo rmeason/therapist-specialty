@@ -13,7 +13,7 @@ function ProfileCard(props) {
 
 
         <div class="card-user-avatar">
-            <img src={props.image} alt={props.name} class="user-image" />
+            <img src={BImg} alt="Pooh" class="user-image" />
         </div>
 
 

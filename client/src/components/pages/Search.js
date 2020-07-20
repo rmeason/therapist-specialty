@@ -66,6 +66,7 @@ function Search() {
     specialties={Providers.specialties}
     contact={Providers.contact}
     location={Providers.location}
+    matrix={Providers.matrix}
     psychology={Providers.psychology}
   />
 ))}

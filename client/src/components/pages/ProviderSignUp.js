@@ -7,12 +7,19 @@ import "./ProviderSignUp.css"
 
 const ProviderSignUp = () => {
     
-    const [inputs, setInputs]=useState({})
+    const [inputs, setInputs]=useState({});
 
     const submit = (e) => {
         e.preventDefault();
         console.log("works")
         API.saveProvider(inputs)
+        .then(res => {
+
+            console.log("made it back to the front", res);
+
+
+        })
+        .catch(err => console.log(err));
     }
 
     const handleInputs = (e) => {
@@ -42,7 +49,7 @@ const ProviderSignUp = () => {
             <span class="input-group-label" id="fa-img">
                 <i class="fa fa-image"></i>
             </span>
-            <input name="name" onChange={handleInputs} class="input-group-field" type="file" placeholder="Add a professional photo" />
+            <input name="image" onChange={handleInputs} class="input-group-field" type="file" placeholder="Add a professional photo" />
             </div>
 
             <div class="input-group">
@@ -90,69 +97,69 @@ const ProviderSignUp = () => {
         <label class="statement">Are you more comfortable treating anxiety or depression?</label>
         <ul class='likert'>
         <li>
-            <input type="radio" name="likert01" value="1" />
+            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="1" />
             <label>Anxiety</label>
         </li>
         <li>
-            <input type="radio" name="likert01" value="2" />
+            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="2" />
             <label></label>
         </li>
         <li>
-            <input type="radio" name="likert01" value="3" />
+            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="3" />
             <label>Neutral</label>
         </li>
         <li>
-            <input type="radio" name="likert01" value="4" />
+            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="4" />
             <label></label>
         </li>
         <li>
-            <input type="radio" name="likert01" value="5" />
+            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="5" />
             <label>Depression</label>
         </li>
         </ul>
         <label class="statement">Are better at dealing with issues involving happiness or saddness?</label>
         <ul class='likert'>
         <li>
-            <input type="radio" name="likert02" value="1" />
+            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="1" />
             <label>Happiness</label>
         </li>
         <li>
-            <input type="radio" name="likert02" value="2" />
+            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="2" />
             <label></label>
         </li>
         <li>
-            <input type="radio" name="likert02" value="3" />
+            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="3" />
             <label>Neutral</label>
         </li>
         <li>
-            <input type="radio" name="likert02" value="4" />
+            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="4" />
             <label></label>
         </li>
         <li>
-            <input type="radio" name="likert02" value="5" />
+            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="5" />
             <label>Saddness</label>
         </li>
         </ul>
         <label class="statement">Do you work better with those who are more worried or calm?</label>
         <ul class='likert'>
         <li>
-            <input type="radio" name="likert03" value="1" />
+            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="1" />
             <label>Worried</label>
         </li>
         <li>
-            <input type="radio" name="likert03" value="2" />
+            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="2" />
             <label></label>
         </li>
         <li>
-            <input type="radio" name="likert03" value="3" />
+            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="3" />
             <label>Neutral</label>
         </li>
         <li>
-            <input type="radio" name="likert03" value="4" />
+            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="4" />
             <label></label>
         </li>
         <li>
-            <input type="radio" name="likert03" value="5" />
+            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="5" />
             <label>Calm</label>
         </li>
         </ul>
