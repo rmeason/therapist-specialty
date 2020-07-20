@@ -42,7 +42,7 @@ const ProviderSignUp = () => {
             <span class="input-group-label" id="fa-img">
                 <i class="fa fa-image"></i>
             </span>
-            <input class="input-group-field" type="file" placeholder="Add a professional photo" />
+            <input name="name" onChange={handleInputs} class="input-group-field" type="file" placeholder="Add a professional photo" />
             </div>
 
             <div class="input-group">
@@ -63,14 +63,14 @@ const ProviderSignUp = () => {
             <span class="input-group-label" id="fa-img3">
                 <i class="fa fa-mobile"></i>
             </span>
-            <input class="input-group-field" type="text" placeholder="Work phone number" />
+            <input name="contact" onChange={handleInputs} class="input-group-field" type="text" placeholder="Work phone number" />
             </div>
 
             <div class="input-group">
             <span class="input-group-label" id="fa-img4">
                 <i class="fa fa-map-marker"></i>
             </span>
-            <input class="input-group-field" type="text" placeholder="Location" />
+            <input name="location" onChange={handleInputs} class="input-group-field" type="text" placeholder="Location" />
             </div>
         </div>
 

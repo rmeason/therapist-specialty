@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const providerSchema = new Schema({
   id: { type: Number },
-  // image: { type: File, require: false },
+  // image: { type: File, required: false },
   name: { type: String, required: true },
   specialties: { type: String, required: true },
   contact: { type: String, required: false },
