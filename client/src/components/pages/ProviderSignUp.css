@@ -1,9 +1,9 @@
-form {
+  form {
     margin-left: 25%;
     margin-right: 25%;
-}
+  }
 
-form .form-icons {
+  form .form-icons {
     text-align: center;
   }
   
@@ -18,7 +18,7 @@ form .form-icons {
 
   #fa-img {
 
-   margin-top: 2.5px;
+   margin-top: 10px;
    background: darkslategray;
   }
 
@@ -48,6 +48,10 @@ form .form-icons {
   
   form .form-icons .input-group-field {
     border-color: slategray;
+  }
+
+  .fa-connectdevelop:before {
+    float: right;
   }
   
   form .form-icons .fa {

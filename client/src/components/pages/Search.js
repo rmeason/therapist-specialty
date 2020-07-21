@@ -57,6 +57,7 @@ function Search() {
         return (
 <SearchWrapper>
 <SearchBtn />
+<br />
 {state.map(Providers => (
   <ProfileCard
     id={Providers.id}

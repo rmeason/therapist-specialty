@@ -155,11 +155,11 @@ const ProviderSignUp = () => {
             <label>Depression</label>
         </li>
         </ul>
-        <label class="statement">Are better at dealing with issues involving happiness or saddness?</label>
+        <label class="statement">Are better at dealing with issues involving Bipolar Disorder or Negative Symptomology?</label>
         <ul class='likert'>
         <li>
             <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="1" />
-            <label>Happiness</label>
+            <label>Bipolar</label>
         </li>
         <li>
             <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="2" />
@@ -175,14 +175,14 @@ const ProviderSignUp = () => {
         </li>
         <li>
             <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="5" />
-            <label>Saddness</label>
+            <label>- Symptoms</label>
         </li>
         </ul>
-        <label class="statement">Do you work better with those who are more worried or calm?</label>
+        <label class="statement">Do you work better with those who are struggling with anger management or establishing health boundaries?</label>
         <ul class='likert'>
         <li>
             <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="1" />
-            <label>Worried</label>
+            <label>Anger</label>
         </li>
         <li>
             <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="2" />
@@ -198,7 +198,7 @@ const ProviderSignUp = () => {
         </li>
         <li>
             <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="5" />
-            <label>Calm</label>
+            <label>Boundaries</label>
         </li>
         </ul>
         {/* <div class="buttons">

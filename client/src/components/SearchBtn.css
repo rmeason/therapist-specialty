@@ -1,6 +1,6 @@
 
 .input-group {
-    margin-right: 75px;
+  place-content: center;
   }
 
 .input-group-rounded .input-group-field {
@@ -12,5 +12,14 @@
     border-radius: 0 5000px 5000px 0;
     height: inherit;
   }
+
+  #list {
+    text-align: center;
+    border-radius: 1px;
+    border: solid;
+    color: lightslategray;
+    padding: 5px;
+  }
+
   
   

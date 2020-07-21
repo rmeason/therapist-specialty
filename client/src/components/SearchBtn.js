@@ -3,19 +3,22 @@ import "./SearchBtn.css";
 
 function SearchBtn(props) {
 
+    
+    
+    
     return (
 
         <div className="input-group input-group-rounded">
             
-            <input 
+            {/* <input 
             value={props.search}
             onChange={props.handleInputChange}
             className="input-group-field" 
             type="search"  
             {...props} 
-            />
+            /> */}
 
-        <div className="input-group-button">
+        {/* <div className="input-group-button">
 
 
             <input 
@@ -24,12 +27,15 @@ function SearchBtn(props) {
             className="button secondary" 
             value="Search" 
 
-            />
+            /> */}
+{/* 
+        </div> */}
 
-        </div>
+        <h4 id="list">Below is a list of providers in decending order (left to right) based on how closely they match with your answers in the "Mental Health Quiz":</h4>
         </div>
 
     );
+
 }
 
 

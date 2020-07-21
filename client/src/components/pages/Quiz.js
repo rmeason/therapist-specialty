@@ -30,11 +30,11 @@ const Quiz = () => (
         <label>Depressed</label>
       </li>
     </ul>
-    <label className="statement">Are you more happy or sad?</label>
+    <label className="statement">Would you describe yourself as manic or lacking expression?</label>
     <ul className='likert'>
       <li>
         <input type="radio" name="likert2" value="1" />
-        <label>Happy</label>
+        <label>Manic</label>
       </li>
       <li>
         <input type="radio" name="likert2" value="2" />
@@ -50,14 +50,14 @@ const Quiz = () => (
       </li>
       <li>
         <input type="radio" name="likert2" value="5" />
-        <label>Sad</label>
+        <label>Expressionless</label>
       </li>
     </ul>
-    <label className="statement">Are you more worried or calm?</label>
+    <label className="statement">Are you struggle more with controlling your anger, or establishing healthy boundaries?</label>
     <ul className='likert'>
       <li>
         <input type="radio" name="likert3" value="1" />
-        <label>Worried</label>
+        <label>Anger</label>
       </li>
       <li>
         <input type="radio" name="likert3" value="2" />
@@ -73,7 +73,7 @@ const Quiz = () => (
       </li>
       <li>
         <input type="radio" name="likert3" value="5" />
-        <label>Calm</label>
+        <label>Boundaries</label>
       </li>
     </ul>
     <div className="buttons">
