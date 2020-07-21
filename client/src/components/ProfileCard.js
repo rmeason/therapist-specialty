@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BImg from "./pages/img/Bear.jpg";
+// import BImg from "./pages/img/Bear.jpg";
 
 import "./ProfileCard.css";
 
@@ -13,7 +13,7 @@ function ProfileCard(props) {
 
 
         <div class="card-user-avatar">
-            <img src={BImg} alt="Pooh" class="user-image" />
+            <img src={props.image} alt={props.name} class="user-image" />
         </div>
 
 

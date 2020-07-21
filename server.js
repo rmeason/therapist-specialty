@@ -1,10 +1,27 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+//const multer = require("multer");
+// var storage = multer.diskStorage({ 
+//   destination: (req, file, cb) => { 
+//       cb(null, 'uploads') 
+//   }, 
+//   filename: (req, file, cb) => { 
+//       cb(null, file.fieldname + '-' + Date.now()) 
+//   } 
+// }); 
+
+//var upload = multer({dest: "public/uploads/"});
+// const ejs = require("ejs");
+// const path = require("path");
 const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+
+// app.set('view engin', 'ejs');
+
+// app.use(express.static('./public'));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -13,6 +30,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+//app.use(upload.single("image"));
 
 app.use(routes);
 

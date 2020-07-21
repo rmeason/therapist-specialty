@@ -33,7 +33,7 @@ function Footer(props) {
                 <p>These quizzes (as well as peer-reviewed mental-health scales) should not be viewed as or replace the opinion of a professional, and does not act as a diagnosis.</p>
                 <p>This should only be viewed as a starting point to better unerstand yourself and the recources that can help you.</p>
                 <ul className="menu marketing-site-footer-menu-social simple">
-                    <li><a href="#"><i className="fas fa-youtube" aria-hidden="true"></i></a></li>
+                    {/* <li><a href="#"><i className="fas fa-youtube" aria-hidden="true"></i></a></li> */}
                     {/* <li><a href="#"><i className="fa fa-facebook-square" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i className="fa fa-twitter-square" aria-hidden="true"></i></a></li> */}
                 </ul>

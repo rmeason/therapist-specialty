@@ -9,7 +9,6 @@ import Search from "./pages/Search";
 import ProviderSignUp from "./pages/ProviderSignUp";
 import Loading from "./pages/Loading";
 
-
 function PageContainer() {
     const { isLoading } = useAuth0();
 

@@ -3,14 +3,19 @@ const Schema = mongoose.Schema;
 
 const providerSchema = new Schema({
   id: { type: Number },
-  // image: { type: File, required: false },
+  image:     {  
+    type: String, 
+    required: false
+},
   name: { type: String, required: true },
   specialties: { type: String, required: true },
   contact: { type: String, required: false },
   location: { type: String, required: false },
   psychology: { type: String, required: false },
   matrix: { type: Array, required: false }
-});
+},
+  { collection: 'providers' }
+);
 
 const Provider = mongoose.model("Provider", providerSchema);
 

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { Component, useState, useRef } from "react";
 import API from "../../utils/API";
 import "./ProviderSignUp.css"
 
@@ -7,12 +7,22 @@ import "./ProviderSignUp.css"
 
 const ProviderSignUp = () => {
     
+    const ref = useRef();
+
     const [inputs, setInputs]=useState({});
+    const[file, setFile] = useState()
 
     const submit = (e) => {
         e.preventDefault();
         console.log("works")
-        API.saveProvider(inputs)
+        // let form = new FormData(e.target);
+       
+        // form.append("image", file)
+        // console.log(form)
+        // for (let value of form.values()) {
+        //     console.log(value, form[value])
+        // }
+        API.saveProvider({...inputs})
         .then(res => {
 
             console.log("made it back to the front", res);
@@ -25,16 +35,44 @@ const ProviderSignUp = () => {
     const handleInputs = (e) => {
         let name = e.target.name
         let value = e.target.value
+        console.log(e.target);
+
+        // if (name === "image") {
+        //     console.log(e.target.files[0])
+        // setFile(e.target.files[0])
+        // //     let pFormData = new FormData(ref);
+
+        // //     pFormData.append("image", e.target.files[0])
+
+        // //     let clone = inputs
+        // //     clone[name]=pFormData
+        // //     console.log(clone)
+        // //     setInputs(clone)
+
+        // }
+        //     else {
         // console.log(name)
         // console.log(value)
         let clone = inputs
         clone[name]=value
         console.log(clone)
         setInputs(clone)
+        // }
     }
+
+
+    // const fileImage = () => {
+    //     var filename = document.getElementById("file-id").files[0].name; 
+    //     document.getElementById("file-id").files[0].name; 
+    //     alert(filename);
+    // }
+
+    // const fileSelectedHandler = event => {
+    //     console.log(event.target.files[0]);
+    // }
     
     return(
-<form onSubmit={submit}>
+<form onSubmit={submit} ref={ref} enctype="multipart/form-data">
 
 
     <div id="page1" >
@@ -49,7 +87,7 @@ const ProviderSignUp = () => {
             <span class="input-group-label" id="fa-img">
                 <i class="fa fa-image"></i>
             </span>
-            <input name="image" onChange={handleInputs} class="input-group-field" type="file" placeholder="Add a professional photo" />
+            <input name="image" onChange={handleInputs} class="input-group-field" type="text" placeholder="Add a link to your professional photo" />
             </div>
 
             <div class="input-group">
@@ -170,7 +208,7 @@ const ProviderSignUp = () => {
 
     </div>
     <br />
-    <button class="button expanded">Sign-Up</button>
+    <button className="button expanded">Sign-Up</button>
 
 </form>
 );
