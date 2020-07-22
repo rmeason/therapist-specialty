@@ -12,7 +12,7 @@ function TopBar(props) {
             <div data-sticky data-margin-top='0' data-top-anchor="header:bottom" data-btm-anchor="content:bottom">
                 <div className="top-bar topbar-sticky-shrink">
                     <div className="top-bar-title">
-                    <h3>"Therapist-Specialty-Site"</h3>
+                    <h3>Therapist-Specialty</h3>
                     </div>
                     <div className="top-bar-right">
                         <ul className="menu">
