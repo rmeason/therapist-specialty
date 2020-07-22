@@ -53,7 +53,7 @@ const Quiz = () => (
         <label>Expressionless</label>
       </li>
     </ul>
-    <label className="statement">Are you struggle more with controlling your anger, or establishing healthy boundaries?</label>
+    <label className="statement">Are you struggling more with controlling your anger, or establishing healthy boundaries?</label>
     <ul className='likert'>
       <li>
         <input type="radio" name="likert3" value="1" />
