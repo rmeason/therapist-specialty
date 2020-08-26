@@ -50,8 +50,19 @@
     border-color: slategray;
   }
 
+  .fa-trophy:before {
+    float: right;
+    margin-right: 15%;
+  }
+
+  .fa-image:before {
+    float: right;
+    margin-right: 15%;
+  }
+
   .fa-connectdevelop:before {
     float: right;
+    margin-right: 15%;
   }
   
   form .form-icons .fa {

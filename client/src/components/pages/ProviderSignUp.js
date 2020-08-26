@@ -15,6 +15,9 @@ const ProviderSignUp = () => {
     const submit = (e) => {
         e.preventDefault();
         console.log("works")
+
+
+        
         // let form = new FormData(e.target);
        
         // form.append("image", file)
@@ -71,6 +74,27 @@ const ProviderSignUp = () => {
     //     console.log(event.target.files[0]);
     // }
     
+//     const nextPage = (e) => {
+//         e.preventDefault();
+        
+//         document.getElementById("next").addEventListener("click", function () {
+
+//         document.getElementById("page1").classList.add("hide")
+    
+//         document.getElementById("next").classList.add("hide")
+    
+//         document.getElementById("page2").classList.remove("hide")
+        
+//         document.getElementById("btn2").classList.remove("hide")
+    
+//         .then(response => {
+//           console.log(response);
+//         })
+//         .catch(err => {
+//           console.log(err);
+//         });
+//       })
+// }
     return(
 <form onSubmit={submit} ref={ref} enctype="multipart/form-data">
 
@@ -94,7 +118,7 @@ const ProviderSignUp = () => {
             <span class="input-group-label" id="fa-img1">
                 <i class="fa fa-user"></i>
             </span>
-            <input name="name" onChange={handleInputs} required class="input-group-field" type="text" placeholder="Full name" />
+            <input name="name" onChange={handleInputs} class="input-group-field" type="text" placeholder="Full name" />
             </div>
 
             <div class="input-group">
@@ -125,8 +149,8 @@ const ProviderSignUp = () => {
             <input name="psychology" onChange={handleInputs} class="input-group-field" type="text" placeholder="Psychology Today Profile Link" />
             </div>
         </div>
-
-        {/* <button class="button expanded" id="next" >Next Page</button> */}
+{/* 
+        <button class="button expanded" id="next" >Next Page</button> */}
     </div>
 
 
@@ -207,8 +231,9 @@ const ProviderSignUp = () => {
         </div> */}
 
     </div>
-    <br />
-    <button className="button expanded">Sign-Up</button>
+    <br /> 
+    
+    <button className="button expanded submit" id="btn2">Sign-Up</button>
 
 </form>
 );
@@ -217,21 +242,3 @@ const ProviderSignUp = () => {
 
 
 export default ProviderSignUp;
-
-
-
-
-// document.getElementById("next").addEventListener("click", function () {
-
-//   document.getElementById("1stPage").classList.add("hide")
-
-//   document.getElementById("2ndPage").classList.remove("hide")
-
-
-// });
-//   {{!-- .then(response => {
-//     console.log(response);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   }); --}}
