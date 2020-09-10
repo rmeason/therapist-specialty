@@ -30,10 +30,13 @@ const ProviderSignUp = () => {
 
             console.log("made it back to the front", res);
 
-
         })
+
         .catch(err => console.log(err));
+
+
     }
+
 
     const handleInputs = (e) => {
         let name = e.target.name
@@ -61,6 +64,14 @@ const ProviderSignUp = () => {
         console.log(clone)
         setInputs(clone)
         // }
+    }
+
+    const redirect = (e) => {
+
+        e.preventDefault();
+        window.location.replace("https://therapist-specialty.herokuapp.com/search");
+
+        console.log("something happened");
     }
 
 
@@ -96,147 +107,149 @@ const ProviderSignUp = () => {
 //       })
 // }
     return(
-<form onSubmit={submit} ref={ref} enctype="multipart/form-data">
+
+            <form onSubmit={submit, redirect} ref={ref} enctype="multipart/form-data">
 
 
-    <div id="page1" >
-        <div class="form-icons">
-            <h3>Sign-Up to connect with your most compatible clients:</h3>
+                <div id="page1" >
+                    <div class="form-icons">
+                        <h3>Sign-Up to connect with your most compatible clients:</h3>
 
-            <br />
+                        <br />
 
-            <p id="imgTxt" >Choose your profile image: </p>
+                        <p id="imgTxt" >Choose your profile image: </p>
 
-            <div class="input-group">
-            <span class="input-group-label" id="fa-img">
-                <i class="fa fa-image"></i>
-            </span>
-            <input name="image" onChange={handleInputs} class="input-group-field" type="text" placeholder="Add a link to your professional photo" />
-            </div>
+                        <div class="input-group">
+                        <span class="input-group-label" id="fa-img">
+                            <i class="fa fa-image"></i>
+                        </span>
+                        <input name="image" onChange={handleInputs} class="input-group-field" type="text" required placeholder="Add a link to your professional photo" />
+                        </div>
 
-            <div class="input-group">
-            <span class="input-group-label" id="fa-img1">
-                <i class="fa fa-user"></i>
-            </span>
-            <input name="name" onChange={handleInputs} class="input-group-field" type="text" placeholder="Full name" />
-            </div>
+                        <div class="input-group">
+                        <span class="input-group-label" id="fa-img1">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <input name="name" onChange={handleInputs} class="input-group-field" type="text" required placeholder="Full name" />
+                        </div>
 
-            <div class="input-group">
-            <span class="input-group-label" id="fa-img2">
-                <i class="fa fa-trophy"></i>
-            </span>
-            <input name="specialties" onChange={handleInputs} class="input-group-field" type="text" placeholder="What do you specialize in?" />
-            </div>
+                        <div class="input-group">
+                        <span class="input-group-label" id="fa-img2">
+                            <i class="fa fa-trophy"></i>
+                        </span>
+                        <input name="specialties" onChange={handleInputs} class="input-group-field" type="text" required placeholder="What do you specialize in?" />
+                        </div>
 
-            <div class="input-group">
-            <span class="input-group-label" id="fa-img3">
-                <i class="fa fa-mobile"></i>
-            </span>
-            <input name="contact" onChange={handleInputs} class="input-group-field" type="text" placeholder="Work phone number" />
-            </div>
+                        <div class="input-group">
+                        <span class="input-group-label" id="fa-img3">
+                            <i class="fa fa-mobile"></i>
+                        </span>
+                        <input name="contact" onChange={handleInputs} class="input-group-field" type="text" required placeholder="Work phone number" />
+                        </div>
 
-            <div class="input-group">
-            <span class="input-group-label" id="fa-img4">
-                <i class="fa fa-map-marker"></i>
-            </span>
-            <input name="location" onChange={handleInputs} class="input-group-field" type="text" placeholder="Location" />
-            </div>
+                        <div class="input-group">
+                        <span class="input-group-label" id="fa-img4">
+                            <i class="fa fa-map-marker"></i>
+                        </span>
+                        <input name="location" onChange={handleInputs} class="input-group-field" type="text" required placeholder="Location" />
+                        </div>
 
-            <div class="input-group">
-            <span class="input-group-label" id="fa-img4">
-                <i class="fa fa-connectdevelop"></i>
-            </span>
-            <input name="psychology" onChange={handleInputs} class="input-group-field" type="text" placeholder="Psychology Today Profile Link" />
-            </div>
-        </div>
-{/* 
-        <button class="button expanded" id="next" >Next Page</button> */}
-    </div>
+                        <div class="input-group">
+                        <span class="input-group-label" id="fa-img4">
+                            <i class="fa fa-connectdevelop"></i>
+                        </span>
+                        <input name="psychology" onChange={handleInputs} class="input-group-field" type="text" required placeholder="Psychology Today Profile Link" />
+                        </div>
+                    </div>
+            {/* 
+                    <button class="button expanded" id="next" >Next Page</button> */}
+                </div>
 
 
 
-    <div id="page2" >
-        <label class="statement">Are you more comfortable treating anxiety or depression?</label>
-        <ul class='likert'>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="1" />
-            <label>Anxiety</label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="2" />
-            <label></label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="3" />
-            <label>Neutral</label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="4" />
-            <label></label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="5" />
-            <label>Depression</label>
-        </li>
-        </ul>
-        <label class="statement">Are better at dealing with issues involving Bipolar Disorder or Negative Symptomology?</label>
-        <ul class='likert'>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="1" />
-            <label>Bipolar</label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="2" />
-            <label></label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="3" />
-            <label>Neutral</label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="4" />
-            <label></label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="5" />
-            <label>- Symptoms</label>
-        </li>
-        </ul>
-        <label class="statement">Do you work better with those who are struggling with anger management or establishing health boundaries?</label>
-        <ul class='likert'>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="1" />
-            <label>Anger</label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="2" />
-            <label></label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="3" />
-            <label>Neutral</label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="4" />
-            <label></label>
-        </li>
-        <li>
-            <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="5" />
-            <label>Boundaries</label>
-        </li>
-        </ul>
-        {/* <div class="buttons">
-        <button class="clear">Clear</button>
-        <button class="submit">Submit</button>
-        </div> */}
+                <div id="page2" >
+                    <label class="statement">Are you more comfortable treating anxiety or depression?</label>
+                    <ul class='likert'>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="1" />
+                        <label>Anxiety</label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="2" />
+                        <label></label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="3" />
+                        <label>Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="4" />
+                        <label></label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix0" class="input-group-field" value="5" />
+                        <label>Depression</label>
+                    </li>
+                    </ul>
+                    <label class="statement">Are better at dealing with issues involving Bipolar Disorder or Negative Symptomology?</label>
+                    <ul class='likert'>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="1" />
+                        <label>Bipolar</label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="2" />
+                        <label></label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="3" />
+                        <label>Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="4" />
+                        <label></label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix1" class="input-group-field" value="5" />
+                        <label>- Symptoms</label>
+                    </li>
+                    </ul>
+                    <label class="statement">Do you work better with those who are struggling with anger management or establishing health boundaries?</label>
+                    <ul class='likert'>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="1" />
+                        <label>Anger</label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="2" />
+                        <label></label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="3" />
+                        <label>Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="4" />
+                        <label></label>
+                    </li>
+                    <li>
+                        <input type="radio" onChange={handleInputs} name="matrix2" class="input-group-field" value="5" />
+                        <label>Boundaries</label>
+                    </li>
+                    </ul>
+                    {/* <div class="buttons">
+                    <button class="clear">Clear</button>
+                    <button class="submit">Submit</button>
+                    </div> */}
 
-    </div>
-    <br /> 
-    
-    <button className="button expanded submit" id="btn2">Sign-Up</button>
+                </div>
+                <br /> 
 
-</form>
-);
+                    <button className="button expanded submit" id="btn2">Sign-Up</button>
+
+            </form>
+
+        );
 };
 
 
