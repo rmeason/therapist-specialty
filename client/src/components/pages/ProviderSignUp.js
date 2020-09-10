@@ -66,13 +66,13 @@ const ProviderSignUp = () => {
         // }
     }
 
-    const redirect = (e) => {
+    // const redirect = (e) => {
+    //     e.preventDefault();
 
-        e.preventDefault();
-        window.location.replace("https://therapist-specialty.herokuapp.com/search");
+    //     window.location.replace("https://therapist-specialty.herokuapp.com/search");
 
-        console.log("something happened");
-    }
+    //     console.log("something happened");
+    // }
 
 
     // const fileImage = () => {
@@ -108,7 +108,7 @@ const ProviderSignUp = () => {
 // }
     return(
 
-            <form onSubmit={submit, redirect} ref={ref} enctype="multipart/form-data">
+            <form onSubmit={submit} ref={ref} enctype="multipart/form-data">
 
 
                 <div id="page1" >
