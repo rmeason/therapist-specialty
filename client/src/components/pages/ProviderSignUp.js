@@ -34,6 +34,9 @@ const ProviderSignUp = () => {
 
         .catch(err => console.log(err));
 
+        window.location.replace("https://therapist-specialty.herokuapp.com/search");
+
+        console.log("something happened");
 
     }
 
@@ -69,7 +72,7 @@ const ProviderSignUp = () => {
     // const redirect = (e) => {
     //     e.preventDefault();
 
-    //     window.location.replace("https://therapist-specialty.herokuapp.com/search");
+    //     window.location.replace("http://localhost:3000/search");
 
     //     console.log("something happened");
     // }
