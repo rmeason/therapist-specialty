@@ -1,5 +1,7 @@
 # Therapist Specialty
 
+![therapistspecialtyimg](therapist-specialty-img.png)
+
 ## About This Site
 
 Therapist Specialty is a therapist/client compatibility app based off of likert scale quizzes.
