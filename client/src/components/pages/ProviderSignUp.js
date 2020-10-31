@@ -69,14 +69,6 @@ const ProviderSignUp = () => {
         // }
     }
 
-    // const redirect = (e) => {
-    //     e.preventDefault();
-
-    //     window.location.replace("http://localhost:3000/search");
-
-    //     console.log("something happened");
-    // }
-
 
     // const fileImage = () => {
     //     var filename = document.getElementById("file-id").files[0].name; 
